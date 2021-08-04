@@ -1,0 +1,28 @@
+<h3 mat-dialog-title>
+    Detail Pengunjung
+</h3>
+<div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Nama</mat-label>
+        <input matInput [(ngModel)]="data.nama">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Alamat</mat-label>
+        <input matInput [(ngModel)]="data.alamat">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Check In</mat-label>
+        <input matInput type="date" [(ngModel)]="data.checkin">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Check Out</mat-label>
+        <input matInput type="date" [(ngModel)]="data.checkout">
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>No ID</mat-label>
+        <input matInput [(ngModel)]="data.noid">
+    </mat-form-field>
+<div mat-dialog-actions align="end">
+<button mat-button mat-dialog-close>Batal</button>
+<button mat-flat-button (click)="saveData()" [disabled]="loading">{{ loading ? 'Menyimpan...':'Simpan'}}</button>
+</div>
